@@ -49,7 +49,7 @@ export default function Skills() {
       id="skills"
       className="min-h-screen flex flex-col justify-center"
     >
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 ">
         {skills.map((skill, index) => (
           <div
             key={index}

@@ -11,7 +11,6 @@ import Education from "./Components/Education";
 import Skills from "./Components/Skills";
 import image from "./assets/image2.png";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -77,8 +76,8 @@ function App() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden relative">
-      <div className="w-1/2 fixed top-0 left-0 h-full">
+    <div className="overflow-hidden relative flex flex-col">
+      <div className="w-1/2 fixed h-full">
         <img
           src={image}
           alt="Portfolio"
@@ -87,9 +86,8 @@ function App() {
         <SideNav active={activeSection} />
       </div>
 
-      <Navbar />
-
-      <div className="ml-auto w-1/2 min-h-screen">
+      <div className="ml-auto w-1/2 min-h-screen ">
+        <Navbar />
         <div className="flex flex-col justify-center items-center">
           <section
             id="about"
@@ -98,7 +96,6 @@ function App() {
           >
             <About />
           </section>
-
 
           <section
             id="education"
