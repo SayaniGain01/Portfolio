@@ -1,18 +1,26 @@
-
 import React from "react";
 
 export default function SideNav({ active }) {
+  const options = [
+    { title: "about" },
+    { title: "education" },
+    { title: "skills" },
+    { title: "projects" },
+  ];
+
   return (
-    <div className="absolute top-1/2 right-8 flex flex-col gap-4 z-20 text-white font-saira tracking-wide items-end">
-      {["about", "education", "skills", "projects"].map((id) => (
+    <div className="absolute top-1/2 right-8 flex flex-col gap-4 z-20 text-white tracking-wide items-end">
+      {options.map((item) => (
         <a
-          key={id}
-          href={`#${id}`}
+          key={item.title}
+          href={`#${item.title}`}
           className={`text-sm transition-all duration-300 ${
-            active === id ? "font-bold text-white-300" : "hover:font-bold"
+            active === item.title
+              ? "font-bold text-white"
+              : "hover:font-bold hover:white"
           }`}
         >
-          {id.toUpperCase()}
+          {item.title.toUpperCase()}
         </a>
       ))}
     </div>

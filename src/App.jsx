@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "@studio-freight/lenis";
 
 import Navbar from "./Components/Navbar";
 import About from "./Components/About";
@@ -9,7 +8,11 @@ import Projects from "./Components/Projects";
 import SideNav from "./Components/SideNav";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
-import image from "./assets/image2.png";
+
+import aboutImg from "./assets/about.jpg";
+import eduImg from "./assets/education.jpg";
+import skillImg from "./assets/skills.jpg";
+import projectImg from "./assets/projects.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +21,7 @@ function App() {
   const projectRef = useRef(null);
   const educationRef = useRef(null);
   const skillRef = useRef(null);
-  const lenis = useRef(null);
+  const imgContainerRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState("about");
 
@@ -29,19 +32,6 @@ function App() {
       { id: "education", ref: educationRef },
       { id: "skills", ref: skillRef },
     ];
-
-    lenis.current = new Lenis({
-      duration: 1.2,
-      easing: (t) => 1 - Math.pow(1 - t, 3),
-      smooth: true,
-      smoothTouch: true,
-    });
-
-    const raf = (time) => {
-      lenis.current.raf(time);
-      requestAnimationFrame(raf);
-    };
-    requestAnimationFrame(raf);
 
     ScrollTrigger.getAll().forEach((t) => t.kill());
 
@@ -61,27 +51,76 @@ function App() {
         end: "max",
         snap: {
           snapTo: 1 / (sections.length - 1),
-          duration: 0.5,
-          ease: "power1.inOut",
+          duration: 0.6,
+          ease: "power2.inOut",
         },
       });
     }
 
-    lenis.current.on("scroll", ScrollTrigger.update);
-
     return () => {
-      lenis.current.destroy();
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
 
+  // crossfade when image changes
+  useEffect(() => {
+    if (!imgContainerRef.current) return;
+
+    const container = imgContainerRef.current;
+    const oldImage = container.querySelector("img");
+    const newImage = document.createElement("img");
+
+    newImage.src = getImageForSection();
+    newImage.alt = activeSection;
+    newImage.className =
+      "absolute w-full h-full object-cover top-0 left-0 opacity-0";
+
+    container.appendChild(newImage);
+
+    // fade new image in
+    gsap.to(newImage, {
+      opacity: 1,
+      duration: 1.8,
+      ease: "power2.inOut",
+    });
+
+    // fade old image out and remove it
+    if (oldImage) {
+      gsap.to(oldImage, {
+        opacity: 0,
+        duration: 1.8,
+        ease: "power2.inOut",
+        onComplete: () => oldImage.remove(),
+      });
+    }
+  }, [activeSection]);
+
+
+  const getImageForSection = () => {
+    switch (activeSection) {
+      case "about":
+        return aboutImg;
+      case "education":
+        return eduImg;
+      case "skills":
+        return skillImg;
+      case "projects":
+        return projectImg;
+      default:
+        return aboutImg;
+    }
+  };
+
   return (
     <div className="overflow-hidden relative flex flex-col">
-      <div className="w-1/2 fixed h-full">
+      <div
+        ref={imgContainerRef}
+        className="w-1/2 fixed h-full flex justify-center items-center overflow-hidden"
+      >
         <img
-          src={image}
-          alt="Portfolio"
-          className="w-full h-full object-cover"
+          src={getImageForSection()}
+          alt={activeSection}
+          className="absolute w-full h-full object-cover top-0 left-0 opacity-100"
         />
         <SideNav active={activeSection} />
       </div>
