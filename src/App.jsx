@@ -137,6 +137,14 @@ function App() {
           </section>
 
           <section
+            id="projects"
+            ref={projectRef}
+            className="panel min-h-screen flex items-center justify-center"
+          >
+            <Projects />
+          </section>
+
+          <section
             id="education"
             ref={educationRef}
             className="panel min-h-screen px-10 flex items-center justify-center"
@@ -152,13 +160,7 @@ function App() {
             <Skills />
           </section>
 
-          <section
-            id="projects"
-            ref={projectRef}
-            className="panel min-h-screen flex items-center justify-center"
-          >
-            <Projects />
-          </section>
+          
         </div>
       </div>
     </div>

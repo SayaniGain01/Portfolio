@@ -3,9 +3,10 @@ import React from "react";
 export default function SideNav({ active }) {
   const options = [
     { title: "about" },
+    { title: "projects" },
     { title: "education" },
     { title: "skills" },
-    { title: "projects" },
+    
   ];
 
   return (
