@@ -112,7 +112,64 @@ function App() {
   };
 
   return (
-    <div className="overflow-hidden relative flex flex-col">
+    // <div className="overflow-hidden relative flex flex-col">
+
+
+    //   <div
+    //     ref={imgContainerRef}
+    //     className="w-1/2 fixed h-full flex justify-center items-center overflow-hidden"
+    //   >
+    //     <img
+    //       src={getImageForSection()}
+    //       alt={activeSection}
+    //       className="absolute w-full h-full object-cover top-0 left-0 opacity-100"
+    //     />
+    //     <SideNav active={activeSection} />
+    //   </div>
+
+    //   <div className="ml-auto w-1/2 min-h-screen ">
+    //     <Navbar />
+    //     <div className="flex flex-col justify-center items-center">
+    //       <section
+    //         id="about"
+    //         ref={aboutRef}
+    //         className="panel min-h-screen flex items-center justify-center"
+    //       >
+    //         <About />
+    //       </section>
+
+    //       <section
+    //         id="projects"
+    //         ref={projectRef}
+    //         className="panel min-h-screen flex items-center justify-center"
+    //       >
+    //         <Projects />
+    //       </section>
+
+    //       <section
+    //         id="education"
+    //         ref={educationRef}
+    //         className="panel min-h-screen px-10 flex items-center justify-center"
+    //       >
+    //         <Education />
+    //       </section>
+
+    //       <section
+    //         id="skills"
+    //         ref={skillRef}
+    //         className="panel min-h-screen flex items-center justify-center"
+    //       >
+    //         <Skills />
+    //       </section>
+          
+    //     </div>
+    //   </div>
+    // </div>
+    
+  <div className="overflow-hidden relative flex flex-col">
+    {/* ---------- DESKTOP VIEW ---------- */}
+    <div className="hidden md:flex">
+      {/* Left: Background image + sidenav */}
       <div
         ref={imgContainerRef}
         className="w-1/2 fixed h-full flex justify-center items-center overflow-hidden"
@@ -125,7 +182,8 @@ function App() {
         <SideNav active={activeSection} />
       </div>
 
-      <div className="ml-auto w-1/2 min-h-screen ">
+      {/* Right: Scrollable content */}
+      <div className="ml-auto w-1/2 min-h-screen">
         <Navbar />
         <div className="flex flex-col justify-center items-center">
           <section
@@ -147,7 +205,7 @@ function App() {
           <section
             id="education"
             ref={educationRef}
-            className="panel min-h-screen px-10 flex items-center justify-center"
+            className="panel min-h-screen flex items-center justify-center"
           >
             <Education />
           </section>
@@ -159,12 +217,73 @@ function App() {
           >
             <Skills />
           </section>
-
-          
         </div>
       </div>
     </div>
-  );
+
+    {/* ---------- MOBILE VIEW ---------- */}
+    <div className="flex flex-col md:hidden">
+  <Navbar />
+
+  {/* ABOUT */}
+  <section className="min-h-screen flex flex-col">
+    <div className="h-[50vh] w-full">
+      <img
+        src={aboutImg}
+        alt="about"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="flex-1 flex items-center justify-center px-6 py-10">
+      <About />
+    </div>
+  </section>
+
+  {/* PROJECTS */}
+  <section className="min-h-screen flex flex-col">
+    <div className="h-[50vh] w-full">
+      <img
+        src={projectImg}
+        alt="projects"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="flex-1 flex items-center justify-center px-6 py-10">
+      <Projects />
+    </div>
+  </section>
+
+  {/* EDUCATION */}
+  <section className="min-h-screen flex flex-col">
+    <div className="h-[50vh] w-full">
+      <img
+        src={eduImg}
+        alt="education"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="flex-1 flex items-center justify-center px-6 py-10">
+      <Education />
+    </div>
+  </section>
+
+  {/* SKILLS */}
+  <section className="min-h-screen flex flex-col">
+    <div className="h-[50vh] w-full">
+      <img
+        src={skillImg}
+        alt="skills"
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <div className="flex-1 flex items-center justify-center px-6 py-10">
+      <Skills />
+    </div>
+  </section>
+</div>
+  </div>
+);
+
 }
 
 export default App;
