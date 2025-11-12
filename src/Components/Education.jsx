@@ -39,10 +39,10 @@ export default function Education() {
           <button
             key={key}
             onClick={() => setActiveSection(key)}
-            className={`py-2 px-4 rounded-full border text-sm ${
+            className={`py-2 px-4 rounded-full border text-sm shadow-xl ${
               activeSection === key
                 ? "bg-black text-white border-black"
-                : "bg-transparent text-gray-700 border-gray-400 hover:text-black hover:border-black"
+                : "bg-gray-200 text-gray-700 border-gray-400 hover:text-black hover:border-black"
             }`}
           >
             {key}

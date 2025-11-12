@@ -35,7 +35,7 @@ export default function Projects() {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="relative flex flex-col max-w-sm w-full rounded-2xl overflow-hidden border border-gray-600"
+          className="relative flex flex-col max-w-sm w-full rounded-2xl overflow-hidden bg-gray-200 shadow-2xl"
         >
           <img
             className="w-full object-cover"
@@ -45,7 +45,7 @@ export default function Projects() {
 
           <div className="px-6 py-4 ">
             <a href={project.livelink}>
-              <div className="mb-2 text-lg font-semibold hover:text-gray-600 cursor-pointer">
+              <div className="mb-2 text-lg font-semibold hover:text-gray-600 hover:underline cursor-pointer">
                 {project.title}
               </div>
             </a>
@@ -55,7 +55,7 @@ export default function Projects() {
             </p>
             <div className="flex justify-center">
             <a href={project.codeLink}>
-              <button className="bg-transparent text-gray-700 text-sm border-2 py-2 px-4 rounded-full border-gray-400 hover:text-black hover:border-black mb-6">
+              <button className="bg-gray-100 text-gray-700 text-sm border shadow-xl py-2 px-4 rounded-full border-gray-400 hover:text-black hover:border-black mb-6">
                 SEE MORE
               </button>
             </a>

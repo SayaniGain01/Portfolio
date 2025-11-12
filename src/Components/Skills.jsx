@@ -54,7 +54,7 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="border border-gray-500 rounded-md shadow-sm hover:shadow-md transition p-2 flex flex-col items-center"
+            className="bg-gray-200 border border-gray-500 rounded-md shadow-xl hover:shadow-xl transition p-2 flex flex-col items-center"
           >
             <div className="flex-1 flex items-center justify-center p-4">
               <img
