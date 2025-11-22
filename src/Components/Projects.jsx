@@ -1,11 +1,18 @@
 
 import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import work1 from "../assets/work1.png";
-// import work2 from "../assets/work2.png";
+import work2 from "../assets/work2.png";
+
+gsap.registerPlugin(ScrollTrigger)
 
 
 export default function Projects() {
+  const sectionRef = useRef(null);
+  const card2Ref = useRef([])
+
   const projects = [
     {
       title: "THE DESIGN ARCHITECT",
@@ -15,27 +22,53 @@ export default function Projects() {
       codeLink: "https://github.com/SayaniGain01?tab=repositories",
       livelink: "https://the-design-artist.vercel.app/",
     },
-    // {
-    //   title: "EXPENSE TRACKER",
-    //   image: work2,
-    //   description:
-    //     "A full-stack Expense Tracker web app built with FastAPI, where users can log daily expenses, view summaries, and manage their personal finances efficiently.",
-    //   codeLink: "https://github.com/SayaniGain01/Expense-Tracker",
-    //   livelink: "",
-    // },
+    {
+      title: "EXPENSE TRACKER",
+      image: work2,
+      description:
+        "A full-stack Expense Tracker web app built with FastAPI, where users can log daily expenses, view summaries, and manage their personal finances efficiently.",
+      codeLink: "https://github.com/SayaniGain01/Expense-Tracker",
+      livelink: "",
+    },
   ];
 
+    useEffect(()=>{
+
+      const tl = gsap.timeline({
+        scrollTrigger:{
+          trigger:sectionRef.current,
+          pin:true,
+          start:'top center',
+          end:'bottom center',
+          scrub:1,
+          ease:'linear'
+        }
+      })
+
+      tl.to(cardRef.current,
+        {y: 100, opacity: 0, scale: 0.8 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          stagger: 0.3,
+          duration: 1,
+          ease: "power2.out",
+      })
+    },[])
 
   return (
     <section
       id="projects"
+      ref={sectionRef}
       className="max-w-full flex flex-col justify-center items-center px-8 pt-6 space-y-6"
     >
       <h1 className="lg:hidden md:hidden font-semibold mb-4 text-lg self-start">PROJECTS</h1>
       {projects.map((project, index) => (
         <div
           key={index}
-          className="relative flex flex-col max-w-sm w-full rounded-2xl overflow-hidden bg-gray-200 shadow-2xl"
+          ref={(el)=>(cardRef.current[index]=el)}
+          className="relative flex flex-col max-w-sm w-full rounded-xl overflow-hidden bg-gray-200 shadow-2xl"
         >
           <img
             className="w-full object-cover"

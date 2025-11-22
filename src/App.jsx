@@ -194,13 +194,6 @@ function App() {
             <About />
           </section>
 
-          <section
-            id="projects"
-            ref={projectRef}
-            className="panel min-h-screen flex items-center justify-center"
-          >
-            <Projects />
-          </section>
 
           <section
             id="education"
@@ -217,71 +210,80 @@ function App() {
           >
             <Skills />
           </section>
+
+          <section
+            id="projects"
+            ref={projectRef}
+            className="panel min-h-screen flex items-center justify-center"
+          >
+            <Projects />
+          </section>
         </div>
       </div>
     </div>
 
     {/* ---------- MOBILE VIEW ---------- */}
     <div className="flex flex-col md:hidden">
-  <Navbar />
+      <Navbar />
 
-  {/* ABOUT */}
-  <section className="min-h-screen flex flex-col">
-    <div className="h-[50vh] w-full">
-      <img
-        src={aboutImg}
-        alt="about"
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <div className="flex-1 flex items-center justify-center px-6 py-10">
-      <About />
-    </div>
-  </section>
+      {/* ABOUT */}
+      <section className="min-h-screen flex flex-col">
+        <div className="h-[50vh] w-full">
+          <img
+            src={aboutImg}
+            alt="about"
+            className="w-full h-full object-cover rounded-b-3xl"
+          />
+        </div>
+        <div className="flex-1 flex items-center justify-center px-6">
+          <About />
+        </div>
+      </section>
 
-  {/* PROJECTS */}
-  <section className="min-h-screen flex flex-col">
-    <div className="h-[50vh] w-full">
-      <img
-        src={projectImg}
-        alt="projects"
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <div className="flex-1 flex items-center justify-center px-6 py-10">
-      <Projects />
-    </div>
-  </section>
 
-  {/* EDUCATION */}
-  <section className="min-h-screen flex flex-col">
-    <div className="h-[50vh] w-full">
-      <img
-        src={eduImg}
-        alt="education"
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <div className="flex-1 flex items-center justify-center px-6 py-10">
-      <Education />
-    </div>
-  </section>
+      {/* EDUCATION */}
+      <section className="min-h-screen flex flex-col">
+        <div className="h-[50vh] w-full">
+          <img
+            src={eduImg}
+            alt="education"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+        <div className="flex-1 flex items-center justify-center px-6">
+          <Education />
+        </div>
+      </section>
 
-  {/* SKILLS */}
-  <section className="min-h-screen flex flex-col">
-    <div className="h-[50vh] w-full">
-      <img
-        src={skillImg}
-        alt="skills"
-        className="w-full h-full object-cover"
-      />
+      {/* SKILLS */}
+      <section className="min-h-screen flex flex-col">
+        <div className="h-[50vh] w-full">
+          <img
+            src={skillImg}
+            alt="skills"
+            className="w-full h-full object-cover rounded-3xl "
+          />
+        </div>
+        <div className="flex-1 flex items-center justify-center px-6 py-20">
+          <Skills />
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="min-h-screen flex flex-col">
+        <div className="h-[50vh] w-full">
+          <img
+            src={projectImg}
+            alt="projects"
+            className="w-full h-full object-cover rounded-3xl"
+          />
+        </div>
+        <div className="flex-1 flex items-center justify-center px-6 py-20">
+          <Projects />
+        </div>
+      </section>
     </div>
-    <div className="flex-1 flex items-center justify-center px-6 py-10">
-      <Skills />
-    </div>
-  </section>
-</div>
-  </div>
+      </div>
 );
 
 }
