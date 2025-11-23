@@ -95,7 +95,6 @@ function App() {
     }
   }, [activeSection]);
 
-
   const getImageForSection = () => {
     switch (activeSection) {
       case "about":
@@ -112,180 +111,137 @@ function App() {
   };
 
   return (
-    // <div className="overflow-hidden relative flex flex-col">
+    <div className="overflow-hidden relative flex flex-col">
+      {/* ---------- DESKTOP VIEW ---------- */}
+      <div className="hidden md:flex">
+        {/* Left: Background image + sidenav */}
+        <div
+          ref={imgContainerRef}
+          className="w-1/2 fixed h-full flex justify-center items-center overflow-hidden"
+        >
+          <img
+            src={getImageForSection()}
+            alt={activeSection}
+            className="absolute w-full h-full object-cover top-0 left-0 opacity-100"
+          />
+          <SideNav active={activeSection} />
+        </div>
 
+        {/* Right: Scrollable content */}
+        <div className="ml-auto w-1/2 min-h-screen">
+          <Navbar />
+          <div className="flex flex-col justify-center items-center">
+            <section
+              id="about"
+              ref={aboutRef}
+              className="panel min-h-screen flex items-center justify-center"
+            >
+              <About />
+            </section>
 
-    //   <div
-    //     ref={imgContainerRef}
-    //     className="w-1/2 fixed h-full flex justify-center items-center overflow-hidden"
-    //   >
-    //     <img
-    //       src={getImageForSection()}
-    //       alt={activeSection}
-    //       className="absolute w-full h-full object-cover top-0 left-0 opacity-100"
-    //     />
-    //     <SideNav active={activeSection} />
-    //   </div>
+            <section
+              id="education"
+              ref={educationRef}
+              className="panel min-h-screen flex items-center justify-center"
+            >
+              <Education />
+            </section>
 
-    //   <div className="ml-auto w-1/2 min-h-screen ">
-    //     <Navbar />
-    //     <div className="flex flex-col justify-center items-center">
-    //       <section
-    //         id="about"
-    //         ref={aboutRef}
-    //         className="panel min-h-screen flex items-center justify-center"
-    //       >
-    //         <About />
-    //       </section>
+            <section
+              id="skills"
+              ref={skillRef}
+              className="panel min-h-screen flex items-center justify-center"
+            >
+              <Skills />
+            </section>
 
-    //       <section
-    //         id="projects"
-    //         ref={projectRef}
-    //         className="panel min-h-screen flex items-center justify-center"
-    //       >
-    //         <Projects />
-    //       </section>
-
-    //       <section
-    //         id="education"
-    //         ref={educationRef}
-    //         className="panel min-h-screen px-10 flex items-center justify-center"
-    //       >
-    //         <Education />
-    //       </section>
-
-    //       <section
-    //         id="skills"
-    //         ref={skillRef}
-    //         className="panel min-h-screen flex items-center justify-center"
-    //       >
-    //         <Skills />
-    //       </section>
-          
-    //     </div>
-    //   </div>
-    // </div>
-    
-  <div className="overflow-hidden relative flex flex-col">
-    {/* ---------- DESKTOP VIEW ---------- */}
-    <div className="hidden md:flex">
-      {/* Left: Background image + sidenav */}
-      <div
-        ref={imgContainerRef}
-        className="w-1/2 fixed h-full flex justify-center items-center overflow-hidden"
-      >
-        <img
-          src={getImageForSection()}
-          alt={activeSection}
-          className="absolute w-full h-full object-cover top-0 left-0 opacity-100"
-        />
-        <SideNav active={activeSection} />
+            <section
+              id="projects"
+              ref={projectRef}
+              className="panel min-h-screen flex items-center justify-center"
+            >
+              <Projects />
+            </section>
+          </div>
+        </div>
       </div>
 
-      {/* Right: Scrollable content */}
-      <div className="ml-auto w-1/2 min-h-screen">
+
+
+      {/* ---------- MOBILE VIEW ---------- */}
+      <div className="flex flex-col md:hidden">
         <Navbar />
-        <div className="flex flex-col justify-center items-center">
-          <section
-            id="about"
-            ref={aboutRef}
-            className="panel min-h-screen flex items-center justify-center"
-          >
+
+        {/* ABOUT */}
+        <section 
+          id="about"
+          ref={aboutRef}
+          className="min-h-screen flex flex-col">
+          <div className="h-[50vh] w-full">
+            <img
+              src={aboutImg}
+              alt="about"
+              className="w-full h-full object-cover rounded-b-3xl"
+            />
+          </div>
+          <div className="flex-1 flex items-center justify-center px-6">
             <About />
-          </section>
+          </div>
+        </section>
 
-
-          <section
-            id="education"
-            ref={educationRef}
-            className="panel min-h-screen flex items-center justify-center"
-          >
+        {/* EDUCATION */}
+        <section
+          id="education" 
+          ref={educationRef}
+          className="min-h-screen flex flex-col">
+          <div className="h-[50vh] w-full">
+            <img
+              src={eduImg}
+              alt="education"
+              className="w-full h-full object-cover rounded-3xl"
+            />
+          </div>
+          <div className="flex-1 flex items-center justify-center px-6">
             <Education />
-          </section>
+          </div>
+        </section>
 
-          <section
-            id="skills"
-            ref={skillRef}
-            className="panel min-h-screen flex items-center justify-center"
-          >
+        {/* SKILLS */}
+        <section 
+          id="skills"
+          ref={skillRef}
+          className="min-h-screen flex flex-col">
+          <div className="h-[50vh] w-full">
+            <img
+              src={skillImg}
+              alt="skills"
+              className="w-full h-full object-cover rounded-3xl "
+            />
+          </div>
+          <div className="flex-1 flex items-center justify-center px-6 py-20">
             <Skills />
-          </section>
+          </div>
+        </section>
 
-          <section
-            id="projects"
-            ref={projectRef}
-            className="panel min-h-screen flex items-center justify-center"
-          >
+        {/* PROJECTS */}
+        <section 
+          id="projects" 
+          ref={projectRef}
+          className="min-h-screen flex flex-col">
+          <div className="h-[50vh] w-full">
+            <img
+              src={projectImg}
+              alt="projects"
+              className="w-full h-full object-cover rounded-3xl"
+            />
+          </div>
+          <div className="flex-1 flex items-center justify-center px-6 py-20">
             <Projects />
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
-
-    {/* ---------- MOBILE VIEW ---------- */}
-    <div className="flex flex-col md:hidden">
-      <Navbar />
-
-      {/* ABOUT */}
-      <section className="min-h-screen flex flex-col">
-        <div className="h-[50vh] w-full">
-          <img
-            src={aboutImg}
-            alt="about"
-            className="w-full h-full object-cover rounded-b-3xl"
-          />
-        </div>
-        <div className="flex-1 flex items-center justify-center px-6">
-          <About />
-        </div>
-      </section>
-
-
-      {/* EDUCATION */}
-      <section className="min-h-screen flex flex-col">
-        <div className="h-[50vh] w-full">
-          <img
-            src={eduImg}
-            alt="education"
-            className="w-full h-full object-cover rounded-3xl"
-          />
-        </div>
-        <div className="flex-1 flex items-center justify-center px-6">
-          <Education />
-        </div>
-      </section>
-
-      {/* SKILLS */}
-      <section className="min-h-screen flex flex-col">
-        <div className="h-[50vh] w-full">
-          <img
-            src={skillImg}
-            alt="skills"
-            className="w-full h-full object-cover rounded-3xl "
-          />
-        </div>
-        <div className="flex-1 flex items-center justify-center px-6 py-20">
-          <Skills />
-        </div>
-      </section>
-
-      {/* PROJECTS */}
-      <section className="min-h-screen flex flex-col">
-        <div className="h-[50vh] w-full">
-          <img
-            src={projectImg}
-            alt="projects"
-            className="w-full h-full object-cover rounded-3xl"
-          />
-        </div>
-        <div className="flex-1 flex items-center justify-center px-6 py-20">
-          <Projects />
-        </div>
-      </section>
-    </div>
-      </div>
-);
-
+  );
 }
 
 export default App;

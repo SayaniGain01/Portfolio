@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Projects() {
   const sectionRef = useRef(null);
-  const card2Ref = useRef([])
+  const cardRef = useRef([])
 
   const projects = [
     {
