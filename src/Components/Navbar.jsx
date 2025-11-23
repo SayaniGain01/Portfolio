@@ -25,7 +25,7 @@ export default function Navbar() {
           <a href="#education" className="hover:font-semibold" onClick={() => setOpen(false)}>EDUCATION</a>
           <a href="#skills" className="hover:font-semibold" onClick={() => setOpen(false)}>SKILLS</a>
           <a href="#projects" className="hover:font-semibold" onClick={() => setOpen(false)}>PROJECTS</a>
-          <a href="/assets/CV-SAYANI-GAIN.pdf" className="hover:font-semibold" onClick={() => setOpen(false)}>RESUME</a>
+          <a href="/CV-SAYANI-GAIN.pdf" className="hover:font-semibold" onClick={() => setOpen(false)}>RESUME</a>
         </div>
       )}
       </div>
@@ -46,7 +46,7 @@ export default function Navbar() {
           </div>
 
           <div className=" hover:text-gray-600 hover:underline underline-offset-4 cursor-pointer ">
-            <a href="/assets/CV-SAYANI-GAIN.pdf">RESUME</a>
+            <a href="/CV-SAYANI-GAIN.pdf">RESUME</a>
           </div>
         </div>
       </div>
