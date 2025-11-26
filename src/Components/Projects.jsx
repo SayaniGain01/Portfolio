@@ -63,7 +63,7 @@ export default function Projects() {
       ref={sectionRef}
       className="max-w-full flex flex-col justify-center items-center px-8 pt-6 space-y-6"
     >
-      <h1 className="lg:hidden md:hidden font-semibold mb-4 text-lg self-start">PROJECTS</h1>
+      <h1 className="lg:hidden md:hidden font-semibold mb-6 flex justify-center items-center text-lg">PROJECTS</h1>
       {projects.map((project, index) => (
         <div
           key={index}

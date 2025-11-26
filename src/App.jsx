@@ -9,7 +9,7 @@ import SideNav from "./Components/SideNav";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
 
-import aboutImg from "./assets/about.jpg";
+import aboutImg from "./assets/image2.png";
 import eduImg from "./assets/education.jpg";
 import skillImg from "./assets/skills.jpg";
 import projectImg from "./assets/projects.jpg";
@@ -111,7 +111,7 @@ function App() {
   };
 
   return (
-    <div className="overflow-hidden relative flex flex-col">
+    <div className="relative flex flex-col overflow-x-hidden">
       {/* ---------- DESKTOP VIEW ---------- */}
       <div className="hidden md:flex">
         {/* Left: Background image + sidenav */}
@@ -158,7 +158,7 @@ function App() {
             <section
               id="projects"
               ref={projectRef}
-              className="panel min-h-screen flex items-center justify-center"
+              className="panel h-[200vh] flex items-center justify-center"
             >
               <Projects />
             </section>
@@ -177,14 +177,14 @@ function App() {
           id="about"
           ref={aboutRef}
           className="min-h-screen flex flex-col">
-          <div className="h-[50vh] w-full">
+          <div className="h-[45vh] w-full">
             <img
               src={aboutImg}
               alt="about"
               className="w-full h-full object-cover rounded-b-3xl"
             />
           </div>
-          <div className="flex-1 flex items-center justify-center px-6">
+          <div className="min-h-screen flex items-center justify-center px-6">
             <About />
           </div>
         </section>
@@ -192,16 +192,8 @@ function App() {
         {/* EDUCATION */}
         <section
           id="education" 
-          ref={educationRef}
-          className="min-h-screen flex flex-col">
-          <div className="h-[50vh] w-full">
-            <img
-              src={eduImg}
-              alt="education"
-              className="w-full h-full object-cover rounded-3xl"
-            />
-          </div>
-          <div className="flex-1 flex items-center justify-center px-6">
+          ref={educationRef}>
+          <div className="min-h-screen flex items-center justify-center px-6 -my-40">
             <Education />
           </div>
         </section>
@@ -209,16 +201,8 @@ function App() {
         {/* SKILLS */}
         <section 
           id="skills"
-          ref={skillRef}
-          className="min-h-screen flex flex-col">
-          <div className="h-[50vh] w-full">
-            <img
-              src={skillImg}
-              alt="skills"
-              className="w-full h-full object-cover rounded-3xl "
-            />
-          </div>
-          <div className="flex-1 flex items-center justify-center px-6 py-20">
+          ref={skillRef}>
+          <div className="min-h-screen flex items-center justify-center px-6 mt-20">
             <Skills />
           </div>
         </section>
@@ -226,16 +210,8 @@ function App() {
         {/* PROJECTS */}
         <section 
           id="projects" 
-          ref={projectRef}
-          className="min-h-screen flex flex-col">
-          <div className="h-[50vh] w-full">
-            <img
-              src={projectImg}
-              alt="projects"
-              className="w-full h-full object-cover rounded-3xl"
-            />
-          </div>
-          <div className="flex-1 flex items-center justify-center px-6 py-20">
+          ref={projectRef}>
+          <div className="min-h-screen flex items-center justify-center px-6 mt-10">
             <Projects />
           </div>
         </section>

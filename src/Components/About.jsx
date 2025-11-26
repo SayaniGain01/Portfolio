@@ -10,7 +10,7 @@ export default function About() {
     <section id="about" className=" min-h-screen flex flex-col justify-center" >
       <div className="px-20 xs:px-20">
         <p className="text-black text-xs ">
-          <h1 className="lg:hidden md:hidden font-semibold mb-6 text-lg">ABOUT</h1>
+          <h1 className="lg:hidden md:hidden flex justify-center items-center font-semibold mb-6 text-lg">ABOUT</h1>
           Hello world! I am Sayani Gain - a Web Developer with a strong focus on
           crafting visually engaging and highly functional digital experiences.
           <br />

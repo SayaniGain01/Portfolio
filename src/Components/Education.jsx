@@ -31,9 +31,9 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen flex flex-col justify-center items-center px-6 py-10 xs:py-0 sm:py-0"
+      className="min-h-screen flex flex-col justify-center items-center px-6 py-10 "
     >
-      <h1 className="lg:hidden md:hidden font-semibold mb-4 text-lg self-start">EDUCATION</h1>
+      <h1 className="lg:hidden md:hidden flex justify-center items-center font-semibold mb-6 text-lg">EDUCATION</h1>
       <div className="mb-10 font-saira text-xs flex gap-3">
         {Object.keys(educationData).map((key) => (
           <button
