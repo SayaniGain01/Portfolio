@@ -9,10 +9,10 @@ import SideNav from "./Components/SideNav";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
 
-import aboutImg from "./assets/image2.png";
-import eduImg from "./assets/education.jpg";
-import skillImg from "./assets/skills.jpg";
-import projectImg from "./assets/projects.jpg";
+import aboutImg from "./assets/image4.png";
+import eduImg from "./assets/image3.png";
+import skillImg from "./assets/image1.png";
+import projectImg from "./assets/image2.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,9 +28,9 @@ function App() {
   useEffect(() => {
     const sections = [
       { id: "about", ref: aboutRef },
-      { id: "projects", ref: projectRef },
       { id: "education", ref: educationRef },
       { id: "skills", ref: skillRef },
+      { id: "projects", ref: projectRef },
     ];
 
     ScrollTrigger.getAll().forEach((t) => t.kill());
