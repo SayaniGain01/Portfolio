@@ -158,25 +158,30 @@ function App() {
             <section
               id="projects"
               ref={projectRef}
-              className="panel h-[200vh] flex items-center justify-center"
+              className="panel min-h-screen flex items-center justify-center"
             >
               <Projects />
             </section>
+            <a
+              href="https://www.figma.com/design/sUjkcNpbLWy2gxlOHfSPXP/My-Projects?node-id=0-1&p=f&t=Ivewx4gOs7hxcTDe-0"
+              className="pb-10 hover:text-gray-600"
+            >
+              SEE MORE ON DESIGN →
+            </a>
           </div>
         </div>
       </div>
-
-
 
       {/* ---------- MOBILE VIEW ---------- */}
       <div className="flex flex-col md:hidden">
         <Navbar />
 
         {/* ABOUT */}
-        <section 
+        <section
           id="about"
           ref={aboutRef}
-          className="min-h-screen flex flex-col">
+          className="min-h-screen flex flex-col"
+        >
           <div className="h-[45vh] w-full">
             <img
               src={aboutImg}
@@ -190,31 +195,36 @@ function App() {
         </section>
 
         {/* EDUCATION */}
-        <section
-          id="education" 
-          ref={educationRef}>
+        <section id="education" ref={educationRef}>
           <div className="min-h-screen flex items-center justify-center px-6 -my-40">
             <Education />
           </div>
         </section>
 
         {/* SKILLS */}
-        <section 
-          id="skills"
-          ref={skillRef}>
+        <section id="skills" ref={skillRef}>
           <div className="min-h-screen flex items-center justify-center px-6 mt-20">
             <Skills />
           </div>
         </section>
 
         {/* PROJECTS */}
-        <section 
-          id="projects" 
-          ref={projectRef}>
+        <section id="projects" ref={projectRef}>
           <div className="min-h-screen flex items-center justify-center px-6 mt-10">
             <Projects />
           </div>
         </section>
+
+        <section className="w-full flex justify-center items-center">
+          <a
+            href="https://www.figma.com/design/sUjkcNpbLWy2gxlOHfSPXP/My-Projects?node-id=0-1&p=f&t=Ivewx4gOs7hxcTDe-0"
+            className="py-10 hover:text-gray-600 text-sm"
+          >
+            SEE MORE ON DESIGN →
+          </a>
+        </section>
+          
+
       </div>
     </div>
   );

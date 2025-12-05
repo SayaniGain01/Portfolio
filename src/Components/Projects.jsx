@@ -89,7 +89,7 @@ export default function Projects() {
             <div className="flex justify-center">
             <a href={project.codeLink}>
               <button className="bg-gray-100 text-gray-700 text-sm border shadow-xl py-2 px-4 rounded-full border-gray-400 hover:text-black hover:border-black mb-6">
-                SEE MORE
+                SEE CODE
               </button>
             </a>
           </div>
