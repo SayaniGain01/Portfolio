@@ -163,7 +163,7 @@ function App() {
               <Projects />
             </section>
             <a
-              href="https://www.figma.com/design/sUjkcNpbLWy2gxlOHfSPXP/My-Projects?node-id=0-1&p=f&t=Ivewx4gOs7hxcTDe-0"
+              href="https://www.figma.com/design/D6Xp0vjIpf0rxCvmmWty1f/Designs?t=Ivewx4gOs7hxcTDe-0"
               className="pb-10 hover:text-gray-600"
             >
               SEE MORE ON DESIGN →
@@ -217,7 +217,7 @@ function App() {
 
         <section className="w-full flex justify-center items-center">
           <a
-            href="https://www.figma.com/design/sUjkcNpbLWy2gxlOHfSPXP/My-Projects?node-id=0-1&p=f&t=Ivewx4gOs7hxcTDe-0"
+            href="https://www.figma.com/design/D6Xp0vjIpf0rxCvmmWty1f/Designs?t=Ivewx4gOs7hxcTDe-0"
             className="py-10 hover:text-gray-600 text-sm"
           >
             SEE MORE ON DESIGN →
