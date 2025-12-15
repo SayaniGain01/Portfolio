@@ -163,7 +163,7 @@ function App() {
               <Projects />
             </section>
             <a
-              href="https://www.figma.com/design/D6Xp0vjIpf0rxCvmmWty1f/Designs?t=Ivewx4gOs7hxcTDe-0"
+              href="https://www.figma.com/proto/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=0-1&t=z6p92jgGgoV0pRE3-1"
               className="pb-10 hover:text-gray-600"
             >
               SEE MORE ON DESIGN →
