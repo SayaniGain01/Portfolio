@@ -164,7 +164,7 @@ function App() {
             </section>
             <a
               href="https://www.figma.com/proto/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=0-1&t=z6p92jgGgoV0pRE3-1"
-              className="pb-10 hover:text-gray-600"
+              className="pt-10 pb-10 hover:text-gray-600"
             >
               SEE MORE ON DESIGN →
             </a>
