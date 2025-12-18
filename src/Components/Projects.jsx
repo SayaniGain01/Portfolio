@@ -27,7 +27,7 @@ export default function Projects() {
       image: work1,
       description:
         "A full-stack web app built with FastAPI, where users can log daily expenses, view summaries, and manage their personal finances efficiently.",
-      codeLink: "https://github.com/SayaniGain01?tab=repositories",
+      codeLink: "https://github.com/SayaniGain01/Website-Architecture",
       livelink: "https://the-design-artist.vercel.app/",
     },
 
