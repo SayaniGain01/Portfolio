@@ -2,6 +2,11 @@ import React from "react";
 
 const skills = [
   {
+    title: "Figma",
+    img: "https://cdn.worldvectorlogo.com/logos/figma-icon.svg",
+  },
+
+  {
     title: "HTML5",
     img: "https://cdn.worldvectorlogo.com/logos/html-1.svg",
   },
@@ -10,21 +15,18 @@ const skills = [
     img: "https://cdn.worldvectorlogo.com/logos/css-3.svg",
   },
   {
-    title: "Javascript",
+    title: "Tailwind CSS",
+    img: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
+  },
+  {
+    title: "JavaScript",
     img: "https://cdn.worldvectorlogo.com/logos/javascript-1.svg",
   },
   {
     title: "React",
     img: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
   },
-  {
-    title: "Tailwind CSS",
-    img: "https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg",
-  },
-  {
-    title: "Figma",
-    img: "https://cdn.worldvectorlogo.com/logos/figma-icon.svg",
-  },
+
   {
     title: "Python",
     img: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
@@ -33,6 +35,7 @@ const skills = [
     title: "MySQL",
     img: "https://cdn.worldvectorlogo.com/logos/mysql-3.svg",
   },
+
   {
     title: "Git",
     img: "https://cdn.worldvectorlogo.com/logos/git.svg",
@@ -42,6 +45,7 @@ const skills = [
     img: "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg",
   },
 ];
+
 
 export default function Skills() {
   return (

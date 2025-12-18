@@ -11,18 +11,13 @@ export default function About() {
       <div className="px-20 xs:px-20">
         <p className="text-black text-xs ">
           <h1 className="lg:hidden md:hidden flex justify-center items-center font-semibold mb-6 text-lg">ABOUT</h1>
-          Hello world! I am Sayani Gain - a Web Developer with a strong focus on
-          crafting visually engaging and highly functional digital experiences.
+          Hello world! I am Sayani Gain - a UI/UX designer focused on creating intuitive, visually engaging digital experiences.
           <br />
           <br />
-          I am skilled in React and have an eye for UI/UX design. Beyond work, I
-          love exploring new technologies and turning ideas into reality through
-          personal projects.
+          I am skilled in Figma and enjoy designing interfaces that are user-centric, thoughtful, and visually balanced. Beyond design work, I love exploring new technologies and turning ideas into reality through personal projects.
           <br />
           <br />
-          While I’ve dabbled in Python, my primary focus now is on frontend
-          development and design—blending creativity with functionality to make
-          digital experiences both intuitive and engaging.
+          While I have some hands-on experience with React, my main focus is on blending creativity with functionality to craft digital experiences that feel intuitive and engaging.
           <br />
           <br />
           Let's connect and collaborate!

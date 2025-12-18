@@ -18,16 +18,16 @@ export default function Projects() {
       title: "ANIME ZONE",
       image: work2,
       description:
-        "A high-fidelity prototype focusing on content discovery, visual hierarchy, and overall user experience.",
+        "A high-fidelity anime streaming app prototype designed to improve content discovery, visual hierarchy, and overall user experience.",
       codeLink: "https://www.figma.com/design/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=0-1&p=f&t=A0jKSDbrV0Euqgyu-0",
       livelink: "https://www.figma.com/proto/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=133-215&p=f&t=A0jKSDbrV0Euqgyu-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=133%3A215",
     },
     {
-      title: "THE DESIGN ARCHITECT",
+      title: "THE DESIGN ARTIST",
       image: work1,
       description:
-        "A full-stack web app built with FastAPI, where users can log daily expenses, view summaries, and manage their personal finances efficiently.",
-      codeLink: "https://github.com/SayaniGain01?tab=repositories",
+        "A responsive architecture website built with React and Tailwind CSS, using clean components and subtle animations to showcase projects effectively.",
+      codeLink: "https://github.com/SayaniGain01/Website-Architecture",
       livelink: "https://the-design-artist.vercel.app/",
     },
 

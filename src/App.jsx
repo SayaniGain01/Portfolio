@@ -205,10 +205,11 @@ function App() {
 
         {/* PROJECTS */}
         <section id="projects" ref={projectRef}>
-          <div className="min-h-screen flex items-center justify-center px-6 mt-10">
+          <div className="min-h-screen flex items-center justify-center px-6 mt-10 mb-20">
             <Projects />
           </div>
         </section>
+
           
 
       </div>
