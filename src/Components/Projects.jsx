@@ -15,6 +15,14 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "ANIME ZONE",
+      image: work2,
+      description:
+        "A high-fidelity prototype focusing on content discovery, visual hierarchy, and overall user experience.",
+      codeLink: "https://www.figma.com/design/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=0-1&p=f&t=A0jKSDbrV0Euqgyu-0",
+      livelink: "https://www.figma.com/proto/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=133-215&p=f&t=A0jKSDbrV0Euqgyu-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=133%3A215",
+    },
+    {
       title: "THE DESIGN ARCHITECT",
       image: work1,
       description:
@@ -22,14 +30,7 @@ export default function Projects() {
       codeLink: "https://github.com/SayaniGain01?tab=repositories",
       livelink: "https://the-design-artist.vercel.app/",
     },
-    {
-      title: "EXPENSE TRACKER",
-      image: work2,
-      description:
-        "A full-stack Expense Tracker web app built with FastAPI, where users can log daily expenses, view summaries, and manage their personal finances efficiently.",
-      codeLink: "https://github.com/SayaniGain01/Expense-Tracker",
-      livelink: "",
-    },
+
   ];
 
     useEffect(()=>{
@@ -89,7 +90,7 @@ export default function Projects() {
             <div className="flex justify-center">
             <a href={project.codeLink}>
               <button className="bg-gray-100 text-gray-700 text-sm border shadow-xl py-2 px-4 rounded-full border-gray-400 hover:text-black hover:border-black mb-6">
-                SEE CODE
+                SEE MORE
               </button>
             </a>
           </div>
