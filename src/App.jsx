@@ -13,6 +13,7 @@ import aboutImg from "./assets/image4.png";
 import eduImg from "./assets/image3.png";
 import skillImg from "./assets/image1.png";
 import projectImg from "./assets/image2.png";
+import mobileImg from "./assets/image5.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -179,7 +180,7 @@ function App() {
         >
           <div className="h-[45vh] w-full">
             <img
-              src={aboutImg}
+              src={mobileImg}
               alt="about"
               className="w-full h-full object-cover rounded-b-3xl"
             />

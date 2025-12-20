@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 import work1 from "../assets/work1.png";
 import work2 from "../assets/work2.png";
+import work3 from "../assets/work3.png";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -29,6 +30,14 @@ export default function Projects() {
         "A responsive architecture website built with React and Tailwind CSS, using clean components and subtle animations to showcase projects effectively.",
       codeLink: "https://github.com/SayaniGain01/Website-Architecture",
       livelink: "https://the-design-artist.vercel.app/",
+    },
+    {
+      title: "EXPENSE TRACKER",
+      image: work3,
+      description:
+        "A full-stack Expense Tracker web app built with FastAPI, where users can log daily expenses, view summaries, and manage their personal finances efficiently.",
+      codeLink: "https://github.com/SayaniGain01/Expense-Tracker",
+      livelink: "https://www.figma.com/proto/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=261-2150&p=f&t=tuob18G7rZN5iJ0l-0&scaling=scale-down&content-scaling=fixed&page-id=261%3A1990&starting-point-node-id=261%3A2150",
     },
 
   ];
