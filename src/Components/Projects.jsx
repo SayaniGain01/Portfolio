@@ -32,12 +32,12 @@ export default function Projects() {
       livelink: "https://the-design-artist.vercel.app/",
     },
     {
-      title: "EXPENSE TRACKER",
+      title: "CAKETOPIA",
       image: work3,
       description:
-        "A full-stack Expense Tracker web app built with FastAPI, where users can log daily expenses, view summaries, and manage their personal finances efficiently.",
-      codeLink: "https://github.com/SayaniGain01/Expense-Tracker",
-      livelink: "https://www.figma.com/proto/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=261-2150&p=f&t=tuob18G7rZN5iJ0l-0&scaling=scale-down&content-scaling=fixed&page-id=261%3A1990&starting-point-node-id=261%3A2150",
+        "A cake shopping app UI designed to enhance product discovery and personalization, using carousel interactions, best-seller card animations, and an intuitive cake customization journey.",
+      codeLink: "https://www.figma.com/design/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=261-1990&p=f&t=Pc1GlrzvbW66IY8E-0",
+      livelink: "https://www.figma.com/proto/D6Xp0vjIpf0rxCvmmWty1f/Designs?node-id=355-2235",
     },
 
   ];
