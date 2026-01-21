@@ -42,6 +42,16 @@ export default function About() {
               GITHUB
             </a>
           </li>
+          <li>
+            <a
+              href="https://www.instagram.com/tdr_aws/"
+              className="flex items-center gap-2 hover:text-gray-600"
+            >
+              <PiInstagramLogoThin className="text-2xl" />
+              INSTAGRAM
+            </a>
+          </li>
+          
           
         </ul>
       </div>
